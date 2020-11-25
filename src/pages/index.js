@@ -14,17 +14,24 @@ const IndexPage = ({
 
   return (
     <Layout>
-      <section class="hero is-black is-bold is-large" id="first-section">
+      <section class="hero is-warning is-bold is-large" id="first-section">
         <div class="hero-body">
           <div class="container">
-            <h1 class="title">Devherehere!</h1>
-            <h2 class="subtitle">จดบันทึก สรุปสิ่งที่สนใจของเรา</h2>
+            <div class="columns">
+              <div class="column">
+                <h1 class="title"></h1>
+                <h2 class="subtitle"></h2>
+              </div>
+              <div class="column">
+                <div id="logo">DEV ; ) </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
       <section class="section">
         <div class="container ">
-          <div class="title">บทความ</div>
+          <div class="title topic-title">บทความ</div>
           <div class="subtitle">
             <div class="columns">{Posts}</div>
           </div>
@@ -32,7 +39,7 @@ const IndexPage = ({
       </section>
       <section class="section">
         <div class="container ">
-          <div class="title">ผลงาน</div>
+          <div class="title topic-title">ผลงาน</div>
           <div class="subtitle">
             <div class="columns">{Posts}</div>
           </div>

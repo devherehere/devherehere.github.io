@@ -1,3 +1,34 @@
 @charset "utf-8";
 
 @import "~bulma/bulma.sass";
+
+#top-nav {
+  margin: 2% 0;
+}
+
+#logo {
+  vertical-align: top;
+  font-size: 800%;
+}
+
+#profile {
+  width: 256px;
+  height: 256px;
+  margin: 0 auto;
+}
+
+.topic-title {
+  border-left: 5px $yellow solid;
+  padding-left: 1%;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.topic-sub-title {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.footer {
+  background-color: $warning;
+}

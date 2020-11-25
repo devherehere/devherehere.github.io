@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import Header from "./header"
 import "./mystyles.scss"
 
@@ -20,9 +20,15 @@ const Layout = ({ children }) => {
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <main>{children}</main>
-      <footer class="footer">
+      <footer class="footer is-warning">
         <div class="content has-text-centered ">
-          <p>© {d.getFullYear()} Akawit Panutai All Rights Reserved</p>
+          <p>
+            © {d.getFullYear()}{" "}
+            <Link to={"https://www.facebook.com/akawit.panutai"}>
+              Akawit Panutai
+            </Link>{" "}
+            All Rights Reserved
+          </p>
         </div>
       </footer>
     </>

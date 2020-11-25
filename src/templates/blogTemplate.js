@@ -1,5 +1,5 @@
 import React from "react"
-import Layout from "../components/layout"
+import DefaultTemplate from "../components/default-template"
 import { graphql } from "gatsby"
 import { navigate } from "@reach/router"
 export default function Template({
@@ -8,21 +8,26 @@ export default function Template({
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
   return (
-    <Layout>
-      <div className="blog-post-container">
-        <div className="blog-post">
-          <div style={{ cursor: "pointer" }} onClick={() => navigate(-1)}>
-            &lt; Back
+    <DefaultTemplate title={frontmatter.title}>
+      <section class="section">
+        <div className="blog-post-container container">
+          <div className="blog-post">
+            <div class="title topic-title">{frontmatter.title}</div>
+            <div class="subtitle topic-sub-title">{frontmatter.date}</div>
+            <div
+              className="blog-post-content"
+              dangerouslySetInnerHTML={{ __html: html }}
+            />
+
+            <div class="buttons">
+              <button class="button is-warning" onClick={() => navigate(-1)}>
+                Back
+              </button>
+            </div>
           </div>
-          <h1>{frontmatter.title}</h1>
-          <h2>{frontmatter.date}</h2>
-          <div
-            className="blog-post-content"
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
         </div>
-      </div>
-    </Layout>
+      </section>
+    </DefaultTemplate>
   )
 }
 

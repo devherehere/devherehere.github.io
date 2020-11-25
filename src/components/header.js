@@ -4,15 +4,32 @@ import React from "react"
 import "./mystyles.scss"
 
 const Header = ({ siteTitle }) => (
-  <nav class="navbar is-light" role="navigation" aria-label="main navigation">
-    <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-start">
-        <a class="navbar-item">หน้าแรก</a>
-        <a class="navbar-item">บทความ</a>
-        <a class="navbar-item">ผลงาน</a>
-        <a class="navbar-item">เกี่ยวกับ</a>
+  <nav class="level" id="top-nav">
+    <p class="level-item has-text-centered">
+      <Link to={"/"} activeClass={"link is-info"}>
+        Home
+      </Link>
+    </p>
+    <p class="level-item has-text-centered">
+      <Link to={"/blog"} activeClass={"link is-info"}>
+        Blog
+      </Link>
+    </p>
+    <p class="level-item has-text-centered">
+      <div style={{ height: "30px", fontSize: "160%", fontWeight: "bold" }}>
+        DEVHEREHERE
       </div>
-    </div>
+    </p>
+    <p class="level-item has-text-centered">
+      <Link to={"/portfolio"} activeClass={"link is-info"}>
+        Portfolio
+      </Link>
+    </p>
+    <p class="level-item has-text-centered">
+      <Link to={"/about-me"} activeClassName="link is-info">
+        About Me
+      </Link>
+    </p>
   </nav>
 )
 
